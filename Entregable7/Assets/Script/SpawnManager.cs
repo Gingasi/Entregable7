@@ -31,7 +31,7 @@ public class SpawnManager : MonoBehaviour
 
     
 
-    public Vector3 RandomSpawnPosition()
+    public Vector3 RandomSpawnPosition() //Con esta función indicamos que queremos que se spawneen en lugares aleatorios pero siempre en los extremos, nunca en el centro
     {
 
        int RandomSpawn = Random.Range(0, 2);
@@ -49,7 +49,7 @@ public class SpawnManager : MonoBehaviour
 
     }
 
-    public void SpawnFlipFlap()
+    public void SpawnFlipFlap() // Esta función es la que dice que se instancie los objetos previamente metidos en el array. Así como también indicamos que queremos que dependiendo del lado del que salga rote su eje en Y para moverse dentro del mapa hacia la derecha
     {
         randomIndex = Random.Range(0, FlipFlapprefabs.Length);
         spawnPosition = RandomSpawnPosition();
