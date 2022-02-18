@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     public Rigidbody PlayerrigidBody;
     public float jumpForce = 10f;
-    public float YLim = 16f;
+    public float YLim = 14f;
     public bool gameOver;
     public GameObject explosioneffect;
     public GameObject fireffect;
@@ -45,7 +45,7 @@ public class PlayerController : MonoBehaviour
             Wosh.PlayOneShot(impulse, 2f);
         }
 
-        if (transform.position.y > YLim)
+        if (transform.position.y >= YLim)
         {
             PlayerrigidBody.AddForce(Vector3.down, ForceMode.Impulse);
         }
